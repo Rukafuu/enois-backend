@@ -45,7 +45,7 @@ jobs:
           echo "image_ref=${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${SHA_SHORT}" >> $GITHUB_OUTPUT
 
       - name: ⚙️ Configurar Credenciais AWS via OIDC
-        uses: aws-actions/configure-aws-credentials@v6.2.4
+        uses: aws-actions/configure-aws-credentials@v6.3.0
         with:
           role-to-assume: arn:aws:iam::818928662779:role/forest-dev-enois-ecr
           aws-region: ${{ env.AWS_REGION }}
